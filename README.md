@@ -18,7 +18,7 @@ Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토�
 
   ![](./images/objList.png)
 
-- Oracle Cloud Console : 오브젝트 스토리지 (일치여부 확인용)
+- Oracle Cloud Console : 오브젝트 스토리지 (오브젝트 리스트 조회 정상여부 확인)
 
   ![](./images/OCIConsole.png)
 
