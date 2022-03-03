@@ -1,0 +1,5 @@
+#ignore all .class files
+*.class
+
+#DS files
+DS_Store

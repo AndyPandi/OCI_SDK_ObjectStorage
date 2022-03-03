@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title>OCI SDK</title>
+	</head>
+	<body>
+		<h1>OCI SDK - Object Storage Test by AndyPandi</h1>
+		<div style="padding: 30px; border: 1px solid GREY; width: 700px;">
+			<form method="post" action="objUpload.do" enctype="multipart/form-data">
+				<input th:type="hidden" th:value="${namespaceName}" name="namespaceName"/>
+				<input th:type="hidden" th:value="${bucketName}" name="bucketName"/>
+				<input type="file" name="uploadFile" id="uploadFile" />
+				<input type="submit" value="파일업로드" size="50px;" style="margin-left:30px;"/>
+			</form>
+		</div>
+		<br/><br/>
+		<div>			
+			<table th:cellpadding="10" th:cellspacing="10" style="padding: 30px; border: 1px solid GREY;">
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>파일명</th>
+						<th>사이즈</th>
+						<th>생성일</th>
+						<th>수정일</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:if="${not #lists.isEmpty(objectList)}" th:each="row : ${objectList}">
+						<td th:text="${rowStat.index+1}" align="center"></td>
+						<td>
+							<form method="post" action="objDownload.do">
+								<input th:type="hidden" th:value="${namespaceName}" name="namespaceName"/>
+								<input th:type="hidden" th:value="${bucketName}" name="bucketName"/>
+								<input th:type="hidden" th:value="${row.name}" name="objectName"/>
+								<span th:text="${row.name}"></span>
+								<button type="submit">Download</button>
+							</form>
+						</td>
+						<td th:text="${#numbers.formatInteger(row.size,3,'COMMA')} + Bytes" align="right"></td>
+						<td th:text="${#dates.format(row.timeCreated, 'yyyy-MM-dd HH:mm')}" align="center"></td>
+						<td th:text="${#dates.format(row.timeModified, 'yyyy-MM-dd HH:mm')}" align="center"></td>
+					</tr>
+					<tr th:unless="${not #lists.isEmpty(objectList)}">
+						<td colspan="5">조회된 결과가 없습니다.</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
