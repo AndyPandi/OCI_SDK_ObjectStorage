@@ -4,11 +4,11 @@ OCI (Oracle Cloud Infrastructure) 의 SDK를 이용한 오브젝트 스토리지
 
 Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토리지로 파일 업/다운로드를 테스트 할 것입니다.
 
-##### **Web Application Spec**
+### **Web Application Spec**
 
 - Java 1.8 , Maven 8, Spring Boot 2.6.4
 
-##### **실행화면 캡처**
+### **실행화면 캡처**
 
 - 인덱스 화면 : index.do
 
@@ -22,7 +22,7 @@ Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토�
 
   ![](./images/OCIConsole.png)
 
-##### **참고자료**
+### **참고자료**
 
 - 공식매뉴얼: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/javasdk.htm#SDK_for_Java
 - Project Home: https://github.com/oracle/oci-java-sdk/releases
