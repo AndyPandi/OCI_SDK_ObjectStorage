@@ -23,7 +23,7 @@ Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토�
   ![](./images/OCIConsole.png)
 
 ### **메인소스**
-ObjStorageController.java (./blob/main/src/main/java/com/odp/controller/ObjStorageController.java)
+com.odp.controller.ObjStorageController.java [ObjStorageController.java](https://github.com/AndyPandi/OCI_SDK_ObjectStorage/blob/main/src/main/java/com/odp/controller/ObjStorageController.java, "ObjStorageController.java")
 
 - getObjectList: Object List 조회
 
