@@ -22,6 +22,16 @@ Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토�
 
   ![](./images/OCIConsole.png)
 
+### **메인소스**
+ObjStorageController.java (./blob/main/src/main/java/com/odp/controller/ObjStorageController.java)
+
+- getObjectList: Object List 조회
+
+- downloadObject: Ojbect Download
+
+- uploadObject: Object Upload
+
+
 ### **참고자료**
 
 - 공식매뉴얼: https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/javasdk.htm#SDK_for_Java
