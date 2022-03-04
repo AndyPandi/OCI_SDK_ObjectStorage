@@ -2,7 +2,7 @@
 
 OCI (Oracle Cloud Infrastructure) 의 SDK를 이용한 오브젝트 스토리지 사용 매뉴얼 입니다.
 
-Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토리지로 파일 업/다운로드를 테스트 할 것입니다.
+Spring boot 로 만든 단순한 Web Application에서 OCI 오브젝트 스토리지로 파일 업/다운로드 테스트 해봤습니다.
 
 ### **Web Application Spec**
 
